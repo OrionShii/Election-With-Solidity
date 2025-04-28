@@ -17,7 +17,7 @@ This repository contains a smart contract written in Solidity for **electoral vo
 
 - **Solidity**: Smart contract programming language.
 - **Ethereum**: Blockchain platform for deploying and interacting with the contract.
-- **Remix IDE**: For compiling and deploying the smart contract.
+- **VS Code IDE**: For compiling and deploying the smart contract.
 
 ---
 
