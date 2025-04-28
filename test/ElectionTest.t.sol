@@ -68,12 +68,12 @@ contract ElectionTest is Test {
         uint256 endTime = block.timestamp + 1 days;
 
         string[] memory candidateNames = new string[](2);
-        candidateNames[0] = "Alice";
-        candidateNames[1] = "Bob";
+        candidateNames[0] = "Gemoy";
+        candidateNames[1] = "Mega";
 
         string[] memory candidateParties = new string[](2);
-        candidateParties[0] = "Party A";
-        candidateParties[1] = "Party B";
+        candidateParties[0] = "Party Red";
+        candidateParties[1] = "Party Blue";
 
         uint256 id = election.createElection(
             name,
@@ -87,12 +87,12 @@ contract ElectionTest is Test {
 
         
         vm.startPrank(voter);
-        election.vote(id, "Alice");
+        election.vote(id, "Gemoy");
         vm.stopPrank();
 
         
         Election.Candidate[] memory candidates = election.getAllCandidates(id);
-        assertEq(candidates[0].name, "Alice");
+        assertEq(candidates[0].name, "Gemoy");
         assertEq(candidates[0].voteCount, 1);
         assertEq(candidates[1].voteCount, 0);
     }
